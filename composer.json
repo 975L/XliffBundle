@@ -1,5 +1,5 @@
 {
-    "name":        "c975L/xliff-bundle",
+    "name":        "c975l/xliff-bundle",
     "type":        "symfony-bundle",
     "description": "This bundle exports the content of a database table in xlf files",
     "keywords":    ["xliff", "xlf", "translation", "symfony", "bundle", "twig"],
