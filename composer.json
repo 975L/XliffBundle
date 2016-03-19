@@ -31,7 +31,5 @@
     "autoload": {
         "psr-4": { "c975L\\XliffBundle\\": ""
         }
-    },
-
-    "target-dir": "c975L/XliffBundle"
+    }
 }
