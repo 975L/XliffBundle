@@ -29,12 +29,15 @@ class DefaultController extends Controller
     {
         set_time_limit(600);
         $languages = array('en', 'fr', 'es');
-        $filenames = array('messages', 'validators');
         $xlfSkeleton = '@c975LXliff/Default/skeleton.xlf.twig';
         $rootTranslations = __DIR__.'/../../../../app/Resources/translations/';
         $backups = array();
         $files = array();
         $em = $this->getDoctrine()->getManager();
+
+        //Filenames
+        $filenames = $em->getRepository('c975LXliffBundle:Xliff')
+            ->findDistinctFilename();
 
         //Folder creation
         if(!is_dir($rootTranslations))
@@ -43,15 +46,15 @@ class DefaultController extends Controller
         //Exports the files
         foreach($filenames as $filename) {
             foreach($languages as $language) {
-                $filenameXliff = $rootTranslations . $filename . '.' . $language . '.xlf';
+                $filenameXliff = $rootTranslations . $filename['filename'] . '.' . $language . '.xlf';
                 $files[] = $filenameXliff;
 
                 //File contents
                 $xliff = $em->getRepository('c975LXliffBundle:Xliff')
-                    ->findAllByFilenameLanguage($filename, $language);
+                    ->findAllByFilenameLanguage($filename['filename'], $language);
                 ob_start();
                     $contentsXliff = $this->renderView($xlfSkeleton, array(
-                        'filename' => $filename,
+                        'filename' => $filename['filename'],
                         'language' => $language,
                         'xliff' => $xliff
                         ));

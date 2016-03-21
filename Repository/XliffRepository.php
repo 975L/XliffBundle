@@ -32,4 +32,16 @@ class XliffRepository extends EntityRepository
             ->getResult();
     }
 
+    //Find distinct filenames
+    public function findDistinctFilename()
+    {
+        return $this->getEntityManager()
+            ->createQuery(
+                'SELECT DISTINCT x.filename
+                FROM c975L\XliffBundle\Entity\Xliff x
+                ORDER BY x.filename ASC'
+            )
+            ->getResult();
+    }
+
 }
