@@ -14,7 +14,7 @@ MySql Table
 
 - Use `/Resources/sql/TableCreation.sql` to create the table translations.
 The `DROP TABLE` is commented to avoid dropping by mistake.
-This will create a table named `translations` with 3 languages, en, fr ,es
+This will create a table named `translations` with 3 languages: en, fr ,es
 
 - Use `/Resources/sql/TableContents.sql` to fill the table with some useful translations.
 This part will be updated regurlarly.
@@ -31,7 +31,7 @@ Open a command console, enter your project directory and execute the
 following command to download the latest stable version of this bundle:
 
 ```bash
-$ composer require c975l/xliff-bundle "@dev"
+$ composer require c975l/xliff-bundle ">=0.1"
 ```
 
 This command requires you to have Composer installed globally, as explained
