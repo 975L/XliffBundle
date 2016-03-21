@@ -2,15 +2,27 @@
 This bundle exports the content of a database table in xlf files, to be used with Symfony (or other)
 It has also two main goals.
 1) I haven't found a Bundle that simply exports data from database to xlf.
-the ones I've found required to create firstly a xlf file for the default language.
+The ones I've found required to create firstly a xlf file for the default language.
 2) It's a kind of personal exercice to see how to deploy a 3rd party bundle and use it.
 With the whole bunch of related "actions", github, packagist, etc.
 
 FEEL FREE TO LET ME KNOW WHAT'S WRONG or improve the bundle ;-)
 
 
-Installation
-============
+MySql Table
+===========
+
+- Use `/Resources/sql/TableCreation.sql` to create the table translations.
+The `DROP TABLE` is commented to avoid dropping by mistake.
+This will create a table named `translations` with 3 languages, en, fr ,es
+
+- Use `/Resources/sql/TableContents.sql` to fill the table with some useful translations.
+This part will be updated regurlarly.
+
+
+
+BundleInstallation
+==================
 
 Step 1: Download the Bundle
 ---------------------------
@@ -19,7 +31,7 @@ Open a command console, enter your project directory and execute the
 following command to download the latest stable version of this bundle:
 
 ```bash
-$ composer require c975L/xliff-bundle "@dev"
+$ composer require c975l/xliff-bundle "@dev"
 ```
 
 This command requires you to have Composer installed globally, as explained
@@ -56,7 +68,7 @@ class AppKernel extends Kernel
 Step 3: Enable the Routes
 -------------------------
 
-Then, enable the routes by adding it to the `app/config/routing.yml` file of your project:
+Then, enable the routes by adding them to the `app/config/routing.yml` file of your project:
 
 ```yml
 // app/config/routing.yml

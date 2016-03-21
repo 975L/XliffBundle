@@ -20,3 +20,11 @@ INSERT INTO `translations` VALUES ('6', 'messages', 'placeholder.subject', 'The 
 INSERT INTO `translations` VALUES ('7', 'messages', 'placeholder.email', 'My email', 'Mon email', null);
 INSERT INTO `translations` VALUES ('8', 'messages', 'placeholder.message', 'My message', 'Mon message', null);
 INSERT INTO `translations` VALUES ('9', 'validators', 'email.not_valid', 'The email is not valid', 'L\'email n\'est pas valide', null);
+INSERT INTO `translations` VALUES ('10', 'validators', 'name.min_length', 'My name must be at least {{ limit }} characters long', 'Mon nom doit faire au moins {{ limit }} caractères', null);
+INSERT INTO `translations` VALUES ('11', 'validators', 'name.max_length', 'My name cannot be longer than {{ limit }} characters', 'Mon nom ne doit pas excéder {{ limit }} caractères', null);
+INSERT INTO `translations` VALUES ('12', 'validators', 'message.min_length', 'My message must be at least {{ limit }} characters long', 'Mon message doit faire au moins {{ limit }} caractères', null);
+INSERT INTO `translations` VALUES ('13', 'validators', 'message.max_length', 'My message cannot be longer than {{ limit }} characters', 'Mon message ne doit pas excéder {{ limit }} caractères', null);
+INSERT INTO `translations` VALUES ('14', 'validators', 'subject.min_length', 'The subject must be at least {{ limit }} characters long', 'Le sujet doit faire au moins {{ limit }} caractères', null);
+INSERT INTO `translations` VALUES ('15', 'validators', 'subject.max_length', 'The subject cannot be longer than {{ limit }} characters', 'Le sujet ne doit pas excéder {{ limit }} caractères', null);
+INSERT INTO `translations` VALUES ('16', 'messages', 'label.send', 'Send', 'Envoyer', null);
+INSERT INTO `translations` VALUES ('17', 'messages', 'mail.sent', 'My email has been well sent!', 'Mon email a bien été envoyé !', null);

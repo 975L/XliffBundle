@@ -31,10 +31,14 @@ class DefaultController extends Controller
         $languages = array('en', 'fr', 'es');
         $filenames = array('messages', 'validators');
         $xlfSkeleton = '@c975LXliff/Default/skeleton.xlf.twig';
-        $rootTranslations = Helpers::getSiteRoot() . '/app/Resources/translations/';
+        $rootTranslations = __DIR__.'/../../../../app/Resources/translations/';
         $backups = array();
         $files = array();
         $em = $this->getDoctrine()->getManager();
+
+        //Folder creation
+        if(!is_dir($rootTranslations))
+            mkdir($rootTranslations, 0775, true);
 
         //Exports the files
         foreach($filenames as $filename) {

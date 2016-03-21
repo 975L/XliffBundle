@@ -19,5 +19,6 @@ CREATE TABLE `translations` (
   `en` varchar(1024) DEFAULT NULL,
   `fr` varchar(1024) DEFAULT NULL,
   `es` varchar(1024) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `un_trans_key` (`trans_key`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
