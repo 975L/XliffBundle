@@ -54,10 +54,14 @@ class AppKernel extends Kernel
 {
     public function registerBundles()
     {
-        $bundles = array(
+        $bundles = [
             // ...
-            new c975L\XliffBundle\c975LXliffBundle(),
-        );
+        ];
+
+        if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
+            // ...
+            $bundles[] = new c975L\XliffBundle\c975LXliffBundle();
+        }
 
         // ...
     }
@@ -69,10 +73,10 @@ class AppKernel extends Kernel
 Step 3: Enable the Routes
 -------------------------
 
-Then, enable the routes by adding them to the `app/config/routing.yml` file of your project:
+Then, enable the routes by adding them to the `app/config/routing_dev.yml` file of your project:
 
 ```yml
-// app/config/routing.yml
+// app/config/routing_dev.yml
 
 ...
 c975_l_xliff:
