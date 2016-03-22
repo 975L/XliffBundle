@@ -29,9 +29,10 @@ Step 1: Download the Bundle
 
 Open a command console, enter your project directory and execute the
 following command to download the latest stable version of this bundle:
+**We strongly recommend to use this only on the dev part and to transfer (git, rsync,ftp, etc.) the xlf files to the prod server.**
 
 ```bash
-$ composer require c975l/xliff-bundle "0.*"
+$ composer require-dev c975l/xliff-bundle "0.*"
 ```
 
 This command requires you to have Composer installed globally, as explained
