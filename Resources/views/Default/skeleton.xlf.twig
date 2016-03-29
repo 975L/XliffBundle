@@ -9,7 +9,7 @@
         {% for xliff_line in xliff %}
             <trans-unit id="{{ xliff_line.id }}">
                 <source>{{ xliff_line.transKey }}</source>
-                <target>{{ xliff_line.target }}</target>
+                <target><![CDATA[{{ xliff_line.target|raw }}]]></target>
             </trans-unit>
         {% endfor %}
         </body>
