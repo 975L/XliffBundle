@@ -31,7 +31,6 @@ class DefaultController extends Controller
         $languages = array('en', 'fr', 'es');
         $xlfSkeleton = '@c975LXliff/Default/skeleton.xlf.twig';
         $rootTranslations = __DIR__.'/../../../../app/Resources/translations/';
-        $backups = array();
         $files = array();
         $em = $this->getDoctrine()->getManager();
 
@@ -60,20 +59,12 @@ class DefaultController extends Controller
                         ));
                 ob_end_clean();
 
-                //File backup
-                if(file_exists($filenameXliff)) {
-                    $filenameXliffBackup = $filenameXliff . '.bak';
-                    rename ($filenameXliff, $filenameXliffBackup);
-                    $backups[] = $filenameXliffBackup;
-                }
-
                 //File writing
                 file_put_contents($filenameXliff, $contentsXliff);
             }
         }
     return $this->render('@c975LXliff/Default/index.html.twig', array(
         'files' => $files,
-        'backups' => $backups
         ));
     }
 

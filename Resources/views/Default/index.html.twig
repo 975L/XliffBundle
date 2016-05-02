@@ -9,14 +9,4 @@
         <li>{{ file }}</li>
     {% endfor %}
     </ul>
-
-    {% if backups|length > 0 %}
-        The following {{ backups|length }} xliff files have been backed up!<br/>
-        <ul>
-        {% for backup in backups %}
-            <li>{{ backup }}</li>
-        {% endfor %}
-        </ul>
-    {% endif %}
-
 </div>

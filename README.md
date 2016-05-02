@@ -84,3 +84,13 @@ c975_l_xliff:
     type:     annotation
     prefix:   /
 ```
+
+
+Usage
+=====
+
+A route named `/975l_xliff` can be called from your local web server, this will run the bundle and create the files
+
+Please note that the missing translations in a language will be replaced by the english text between brackets,
+this will break the ability to see from Symfony's toolbar the missing translations but as we rely on the database,
+we'll still be able to know what are the missing texts.

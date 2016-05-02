@@ -9,7 +9,11 @@
         {% for xliff_line in xliff %}
             <trans-unit id="{{ xliff_line.id }}">
                 <source>{{ xliff_line.transKey|trim }}</source>
-                <target><![CDATA[{{ xliff_line.target|raw }}]]></target>
+                {% if xliff_line.target == null %}
+                    <target><![CDATA[[ {{ xliff_line.en|raw }} ]]]></target>
+                {% else %}
+                    <target><![CDATA[{{ xliff_line.target|raw }}]]></target>
+                {% endif %}
             </trans-unit>
         {% endfor %}
         </body>
