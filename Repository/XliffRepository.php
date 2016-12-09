@@ -23,7 +23,6 @@ class XliffRepository extends EntityRepository
                 'SELECT x.id, x.transKey, x.en, x.' . $language . ' AS target
                 FROM c975L\XliffBundle\Entity\Xliff x
                 WHERE x.filename = :filename
-                    AND x.en IS NOT NULL
                 ORDER BY x.transKey ASC'
             )
             ->setParameters(array(
