@@ -6,7 +6,7 @@ The ones I've found required to create firstly a xlf file for the default langua
 2) It's a kind of personal exercice to see how to deploy a 3rd party bundle and use it.
 With the whole bunch of related "actions", github, packagist, etc.
 
-FEEL FREE TO LET ME KNOW WHAT'S WRONG or improve the bundle ;-)
+FEEL FREE TO LET ME KNOW WHAT'S WRONG or to improve the bundle ;-)
 
 
 MySql Table
