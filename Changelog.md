@@ -1,5 +1,9 @@
 # Changelog
 
+v0.6.2
+------
+- Modifications in REAME.md due to `composer -require-dev` does not exist (15/03/2017)
+
 v0.6.1
 ------
 - Corrections in composer.json and travis.yml (15/03/2017)
