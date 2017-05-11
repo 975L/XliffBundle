@@ -52,7 +52,7 @@ class DefaultController extends Controller
 
                 //File contents
                 $xliff = $em->getRepository('c975LXliffBundle:Xliff')
-                    ->findAllByFilenameLanguage($filename['filename'], $language);
+                    ->findAllByFilenameLanguage($filename['filename'], $sourceLanguage, $language);
                 ob_start();
                     $contentsXliff = $this->renderView($xlfSkeleton, array(
                         'sourceLanguage' => $sourceLanguage,

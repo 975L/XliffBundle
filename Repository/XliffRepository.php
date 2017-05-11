@@ -16,11 +16,11 @@ class XliffRepository extends EntityRepository
 {
 
     //Find all the records for the filename and the language
-    public function findAllByFilenameLanguage($filename, $language)
+    public function findAllByFilenameLanguage($filename, $sourceLanguage, $language)
     {
         return $this->getEntityManager()
             ->createQuery(
-                'SELECT x.id, x.transKey, x.en, x.' . $language . ' AS target
+                'SELECT x.id, x.transKey, x.' . $sourceLanguage . ', x.' . $language . ' AS target
                 FROM c975L\XliffBundle\Entity\Xliff x
                 WHERE x.filename = :filename
                 ORDER BY x.transKey ASC'
