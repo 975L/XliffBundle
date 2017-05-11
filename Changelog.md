@@ -1,5 +1,9 @@
 # Changelog
 
+v0.7.1
+------
+- Set-up of the source language to export in `app/config_dev.yml` file of the project (11/05/2017)
+
 v0.7
 ------
 - Set-up of the languages to export in `app/config_dev.yml` file of the project (11/05/2017)

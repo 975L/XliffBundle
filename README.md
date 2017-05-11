@@ -94,6 +94,7 @@ Then define the list of languages to be exported in the `app/config_dev.yml` fil
 
 ...
 c975_l_xliff:
+    source: 'en'
     languages: ['en', 'fr', 'es']
 ```
 **The languages MUST match the column's names in the database table.**

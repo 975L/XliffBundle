@@ -28,6 +28,7 @@ class DefaultController extends Controller
     public function indexAction()
     {
         set_time_limit(600);
+        $sourceLanguage = $this->container->getParameter('c975_l_xliff.source');
         $languages = $this->container->getParameter('c975_l_xliff.languages');
 
         $xlfSkeleton = '@c975LXliff/Default/skeleton.xlf.twig';
@@ -54,6 +55,7 @@ class DefaultController extends Controller
                     ->findAllByFilenameLanguage($filename['filename'], $language);
                 ob_start();
                     $contentsXliff = $this->renderView($xlfSkeleton, array(
+                        'sourceLanguage' => $sourceLanguage,
                         'filename' => $filename['filename'],
                         'language' => $language,
                         'xliff' => $xliff

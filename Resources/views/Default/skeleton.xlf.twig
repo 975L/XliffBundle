@@ -4,7 +4,7 @@
 {% spaceless %}
 <?xml version="1.0"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" target-language="{{ language }}" datatype="plaintext" original="{{ filename }}.en.xlf">
+    <file source-language="{{ sourceLanguage }}" target-language="{{ language }}" datatype="plaintext" original="{{ filename }}.{{ sourceLanguage }}.xlf">
         <body>
         {% for xliff_line in xliff %}
             <trans-unit id="{{ xliff_line.id }}">

@@ -21,10 +21,17 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
+                ->scalarNode('source')
+                    ->defaultValue('en')
+                ->end()
+            ->end()
+        ;
+        $rootNode
+            ->children()
                 ->arrayNode('languages')
                 ->prototype('scalar')->end()
                 ->defaultValue(array(
-                    'php',
+                    'en',
                 ))
             ->end()
         ;
