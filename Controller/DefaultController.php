@@ -28,7 +28,8 @@ class DefaultController extends Controller
     public function indexAction()
     {
         set_time_limit(600);
-        $languages = array('en', 'fr', 'es');
+        $languages = $this->container->getParameter('c975_l_xliff.languages');
+
         $xlfSkeleton = '@c975LXliff/Default/skeleton.xlf.twig';
         $rootTranslations = __DIR__.'/../../../../app/Resources/translations/';
         $files = array();

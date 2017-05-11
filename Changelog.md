@@ -1,8 +1,12 @@
 # Changelog
 
+v0.7
+------
+- Set-up of the languages to export in `app/config_dev.yml` file of the project (11/05/2017)
+
 v0.6.2
 ------
-- Modifications in REAME.md due to `composer -require-dev` does not exist (15/03/2017)
+- Modifications in README.md due to `composer -require-dev` does not exist (15/03/2017)
 
 v0.6.1
 ------

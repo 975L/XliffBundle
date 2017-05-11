@@ -1,13 +1,6 @@
 # XliffBundle
-This bundle exports the content of a database table in xlf files, to be used with Symfony (or other)
-It has also two main goals.
-1) I haven't found a Bundle that simply exports data from database to xlf.
-The ones I've found required to create firstly a xlf file for the default language.
-2) It's a kind of personal exercice to see how to deploy a 3rd party bundle and use it.
-With the whole bunch of related "actions", github, packagist, etc.
 
-FEEL FREE TO LET ME KNOW WHAT'S WRONG or to improve the bundle ;-)
-
+This bundle exports columns as languages of a database table in xlf files, to be used as translation files in Symfony (or other)
 
 MySql Table
 ===========
@@ -18,8 +11,6 @@ This will create a table named `translations` with 3 languages: en, fr ,es
 
 - Use `/Resources/sql/TableContents.sql` to fill the table with some useful translations.
 This part will be updated regurlarly.
-
-
 
 BundleInstallation
 ==================
@@ -93,6 +84,19 @@ c975_l_xliff:
     prefix:   /
 ```
 
+Step 4: Define languages to be exported
+---------------------------------------
+
+Then define the list of languages to be exported in the `app/config_dev.yml` file of your project:
+
+```yml
+// app/config_dev.yml
+
+...
+c975_l_xliff:
+    languages: ['en', 'fr', 'es']
+```
+**The languages MUST match the column's names in the database table.**
 
 Usage
 =====
