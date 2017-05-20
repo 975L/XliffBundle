@@ -35,6 +35,13 @@ class Configuration implements ConfigurationInterface
                 ))
             ->end()
         ;
+        $rootNode
+            ->children()
+                ->scalarNode('rootTranslations')
+                    ->defaultValue('app/Resources/translations')
+                ->end()
+            ->end()
+        ;
 
         return $treeBuilder;
     }

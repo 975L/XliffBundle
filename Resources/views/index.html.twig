@@ -1,0 +1,15 @@
+{# Resources/views/index.html.twig #}
+
+<html>
+<head></head>
+<body>
+    <div>
+        The following {{ files|length }} xliff files have been created!<br/>
+        <ul>
+            {% for file in files %}
+                <li>{{ file }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

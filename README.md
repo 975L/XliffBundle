@@ -1,6 +1,6 @@
 # XliffBundle
 
-This bundle exports columns as languages of a database table in xlf files, to be used as translation files in Symfony (or other)
+This bundle exports columns as languages, from a database table, in xlf files, to be used as translation files in Symfony (or other).
 
 MySql Table
 ===========
@@ -24,7 +24,7 @@ Add the following to your `composer.json > require-dev section`
 ```
 "require-dev": {
     ...
-    "c975l/symfonycountlinescode-bundle": "1.*"
+    "c975l/xliff-bundle": "1.*"
 },
 ```
 Then open a command console, enter your project directory and update composer,

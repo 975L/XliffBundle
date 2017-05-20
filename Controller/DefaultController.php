@@ -16,13 +16,14 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use c975L\XliffBundle\Repository\XliffRepository;
 use c975L\XliffBundle\Entity\Xliff;
-use c975L\XliffBundle\Helpers\Helpers;
+use Symfony\Component\Filesystem\Filesystem;
 
 class DefaultController extends Controller
 {
 
     /**
-     * @Route("/975l_xliff")
+     * @Route("/975l_xliff",
+     *      name = "975l_xliff")
      * @Method({"GET", "HEAD"})
      */
     public function indexAction()
@@ -30,9 +31,9 @@ class DefaultController extends Controller
         set_time_limit(600);
         $sourceLanguage = $this->container->getParameter('c975_l_xliff.source');
         $languages = $this->container->getParameter('c975_l_xliff.languages');
+        $rootTranslations = __DIR__.'/../../../../' . $this->container->getParameter('c975_l_xliff.rootTranslations') . '/';
+        $xlfSkeleton = '@c975LXliff/skeleton.xlf.twig';
 
-        $xlfSkeleton = '@c975LXliff/Default/skeleton.xlf.twig';
-        $rootTranslations = __DIR__.'/../../../../app/Resources/translations/';
         $files = array();
         $em = $this->getDoctrine()->getManager();
 
@@ -41,8 +42,8 @@ class DefaultController extends Controller
             ->findDistinctFilename();
 
         //Folder creation
-        if(!is_dir($rootTranslations))
-            mkdir($rootTranslations, 0775, true);
+        $fs = new Filesystem();
+        $fs->mkdir($rootTranslations, 0770);
 
         //Exports the files
         foreach($filenames as $filename) {
@@ -62,13 +63,14 @@ class DefaultController extends Controller
                         ));
                 ob_end_clean();
 
-                //File writing
-                file_put_contents($filenameXliff, $contentsXliff);
+                //Writes file
+                $fs->dumpFile($filenameXliff, $contentsXliff);
             }
         }
-    return $this->render('@c975LXliff/Default/index.html.twig', array(
-        'files' => $files,
-        ));
+
+        return $this->render('@c975LXliff/index.html.twig', array(
+            'files' => $files,
+            ));
     }
 
 }
