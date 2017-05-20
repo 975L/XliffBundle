@@ -25,9 +25,6 @@ class c975LXliffExtension extends Extension
         $configuration = new Configuration();
         $processedConfig = $this->processConfiguration( $configuration, $configs );
 
-        $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
-        $loader->load('services.yml');
-
         $container->setParameter('c975_l_xliff.source', $processedConfig['source']);
         $container->setParameter('c975_l_xliff.languages', $processedConfig['languages']);
     }

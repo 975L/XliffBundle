@@ -1,5 +1,9 @@
 # Changelog
 
+v0.7.2
+------
+- Suppression of files not needed (20/05/2017)
+
 v0.7.1.1
 ------
 - Correction in query to use the sourceLanguage (11/05/2017)

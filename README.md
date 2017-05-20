@@ -12,8 +12,8 @@ This will create a table named `translations` with 3 languages: en, fr ,es
 - Use `/Resources/sql/TableContents.sql` to fill the table with some useful translations.
 This part will be updated regurlarly.
 
-BundleInstallation
-==================
+Bundle installation
+===================
 
 Step 1: Download the Bundle
 ---------------------------
