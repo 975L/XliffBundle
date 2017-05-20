@@ -1,5 +1,9 @@
 # Changelog
 
+v1.1
+------
+- Suppression of Tests folders as none are done (20/05/2017)
+
 v1.0
 ------
 - Add of the name of Route to export trnaslations files (20/05/2017)
