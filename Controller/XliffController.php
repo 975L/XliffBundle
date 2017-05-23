@@ -18,7 +18,7 @@ use Symfony\Component\HttpFoundation\Response;
 use c975L\XliffBundle\Repository\XliffRepository;
 use c975L\XliffBundle\Entity\Xliff;
 
-class DefaultController extends Controller
+class XliffController extends Controller
 {
 
     /**
@@ -29,9 +29,9 @@ class DefaultController extends Controller
     public function indexAction()
     {
         set_time_limit(600);
-        $sourceLanguage = $this->container->getParameter('c975_l_xliff.source');
-        $languages = $this->container->getParameter('c975_l_xliff.languages');
-        $rootTranslations = __DIR__.'/../../../../' . $this->container->getParameter('c975_l_xliff.rootTranslations') . '/';
+        $sourceLanguage = $this->getParameter('c975_l_xliff.source');
+        $languages = $this->getParameter('c975_l_xliff.languages');
+        $rootTranslations = __DIR__.'/../../../../' . $this->getParameter('c975_l_xliff.rootTranslations') . '/';
         $xlfSkeleton = '@c975LXliff/skeleton.xlf.twig';
 
         $files = array();
@@ -64,7 +64,7 @@ class DefaultController extends Controller
                 ob_end_clean();
 
                 //Writes file
-                $fs->dumpFile($filenameXliff, $contentsXliff);
+                $fs->dumpFile($filenameXliff, trim($contentsXliff));
             }
         }
 

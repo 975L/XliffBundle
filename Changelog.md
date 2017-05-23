@@ -1,11 +1,16 @@
 # Changelog
 
+v1.2
+----
+- Simplification of rootNode (23/05/2017)
+- Renaming of DefaultController.php to XliffController.php
+
 v1.1
-------
+----
 - Suppression of Tests folders as none are done (20/05/2017)
 
 v1.0
-------
+----
 - Add of the name of Route to export trnaslations files (20/05/2017)
 - Renaming of files/folders
 - Change in the index.html.twig
@@ -17,7 +22,7 @@ v0.7.2
 - Suppression of files not needed (20/05/2017)
 
 v0.7.1.1
-------
+--------
 - Correction in query to use the sourceLanguage (11/05/2017)
 
 v0.7.1
@@ -25,7 +30,7 @@ v0.7.1
 - Set-up of the source language to export in `app/config_dev.yml` file of the project (11/05/2017)
 
 v0.7
-------
+----
 - Set-up of the languages to export in `app/config_dev.yml` file of the project (11/05/2017)
 
 v0.6.2

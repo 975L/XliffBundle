@@ -24,21 +24,14 @@ class Configuration implements ConfigurationInterface
                 ->scalarNode('source')
                     ->defaultValue('en')
                 ->end()
-            ->end()
-        ;
-        $rootNode
-            ->children()
-                ->arrayNode('languages')
-                ->prototype('scalar')->end()
-                ->defaultValue(array(
-                    'en',
-                ))
-            ->end()
-        ;
-        $rootNode
-            ->children()
                 ->scalarNode('rootTranslations')
                     ->defaultValue('app/Resources/translations')
+                ->end()
+                ->arrayNode('languages')
+                    ->prototype('scalar')->end()
+                    ->defaultValue(array(
+                        'en',
+                    ))
                 ->end()
             ->end()
         ;
