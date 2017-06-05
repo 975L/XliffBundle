@@ -1,5 +1,9 @@
 # Changelog
 
+v1.2.1
+------
+- Correction for default language when target is null (05/06/2017)
+
 v1.2
 ----
 - Simplification of rootNode (23/05/2017)

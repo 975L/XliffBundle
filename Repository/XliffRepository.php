@@ -20,7 +20,7 @@ class XliffRepository extends EntityRepository
     {
         return $this->getEntityManager()
             ->createQuery(
-                'SELECT x.id, x.transKey, x.' . $sourceLanguage . ', x.' . $language . ' AS target
+                'SELECT x.id, x.transKey, x.' . $sourceLanguage . ' AS default, x.' . $language . ' AS target
                 FROM c975L\XliffBundle\Entity\Xliff x
                 WHERE x.filename = :filename
                 ORDER BY x.transKey ASC'

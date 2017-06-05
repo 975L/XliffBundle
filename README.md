@@ -1,6 +1,7 @@
-# XliffBundle
+XliffBundle
+===========
 
-This bundle exports columns as languages, from a database table, in xlf files, to be used as translation files in Symfony (or other).
+This bundle exports, from a database, columns as languages in xlf files, to be used as translation files in Symfony (or other).
 
 MySql Table
 ===========
@@ -104,6 +105,4 @@ Usage
 
 A route named `/975l_xliff` can be called from your local web server, this will run the bundle and create the files
 
-Please note that the missing translations in a language will be replaced by the english text between brackets,
-this will break the ability to see from Symfony's toolbar the missing translations but as we rely on the database,
-we'll still be able to know what are the missing texts.
+**Please note that the missing translations in a language will be replaced by the source language between brackets. This will break the ability to see from Symfony's toolbar the missing translations but as we rely on the database, we'll still be able to know what are the missing texts.**
