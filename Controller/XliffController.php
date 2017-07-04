@@ -23,7 +23,7 @@ class XliffController extends Controller
 
     /**
      * @Route("/975l_xliff",
-     *      name = "975l_xliff")
+     *      name="975l_xliff")
      * @Method({"GET", "HEAD"})
      */
     public function indexAction()

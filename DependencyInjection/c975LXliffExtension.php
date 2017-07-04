@@ -22,7 +22,7 @@ class c975LXliffExtension extends Extension
     public function load(array $configs, ContainerBuilder $container)
     {
         $configuration = new Configuration();
-        $processedConfig = $this->processConfiguration( $configuration, $configs );
+        $processedConfig = $this->processConfiguration($configuration, $configs);
 
         $container->setParameter('c975_l_xliff.source', $processedConfig['source']);
         $container->setParameter('c975_l_xliff.languages', $processedConfig['languages']);

@@ -1,5 +1,16 @@
 # Changelog
 
+v1.3
+----
+- Renaming of file Resources/sql/TableCreation.sql to translations.sql (13/06/2017)
+- Suppression of file Resources/sql/TableContents.sql
+- Update of README.md (04/07/2017)
+
+v1.2.2
+------
+- Changes in README.md (05/06/2017)
+- Renaming of ChangeLog.md
+
 v1.2.1
 ------
 - Correction for default language when target is null (05/06/2017)
