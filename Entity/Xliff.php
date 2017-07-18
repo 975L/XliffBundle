@@ -23,7 +23,6 @@ use Symfony\Component\Filesystem\Exception\IOExceptionInterface;
  */
 class Xliff
 {
-
     /**
      * @var integer
      *
@@ -199,5 +198,4 @@ class Xliff
     {
         return $this->es;
     }
-
 }

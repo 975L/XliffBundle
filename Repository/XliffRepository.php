@@ -42,5 +42,4 @@ class XliffRepository extends EntityRepository
             )
             ->getResult();
     }
-
 }

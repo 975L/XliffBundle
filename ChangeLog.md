@@ -1,5 +1,10 @@
 # Changelog
 
+v1.3.1
+------
+- Run PHP CS-Fixer (18/07/2017)
+- Remove of .travis.yml as tests have to be defined before
+
 v1.3
 ----
 - Renaming of file Resources/sql/TableCreation.sql to translations.sql (13/06/2017)

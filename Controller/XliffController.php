@@ -20,7 +20,6 @@ use c975L\XliffBundle\Entity\Xliff;
 
 class XliffController extends Controller
 {
-
     /**
      * @Route("/975l_xliff",
      *      name="975l_xliff")
@@ -46,8 +45,8 @@ class XliffController extends Controller
         $fs->mkdir($rootTranslations, 0770);
 
         //Exports the files
-        foreach($filenames as $filename) {
-            foreach($languages as $language) {
+        foreach ($filenames as $filename) {
+            foreach ($languages as $language) {
                 $filenameXliff = $rootTranslations . $filename['filename'] . '.' . $language . '.xlf';
                 $files[] = $filenameXliff;
 
@@ -72,5 +71,4 @@ class XliffController extends Controller
             'files' => $files,
             ));
     }
-
 }

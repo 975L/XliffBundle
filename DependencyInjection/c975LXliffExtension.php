@@ -28,5 +28,4 @@ class c975LXliffExtension extends Extension
         $container->setParameter('c975_l_xliff.languages', $processedConfig['languages']);
         $container->setParameter('c975_l_xliff.rootTranslations', $processedConfig['rootTranslations']);
     }
-
 }
