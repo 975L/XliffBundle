@@ -1,5 +1,9 @@
 # Changelog
 
+v1.4.1
+------
+- Updated `README.md` (04/03/2018)
+
 v1.4
 ----
 - Changes in `README.md` (16/08/2017)

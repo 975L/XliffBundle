@@ -67,6 +67,8 @@ Then, in the `app/config_dev.yml` file of your project, define the following:
 
 ```yml
 c975_l_xliff:
+    #folder where the files will be saved
+    rootTranslations: '/Resources/translations'
     #Source language
     source: 'en'
     #List of languages to be exported
@@ -76,6 +78,6 @@ c975_l_xliff:
 
 How to use
 ----------
-Add `/975l_xliff` to the url of your local web server, this will run the bundle and create the files.
+Add `/xliff/create` to the url of your local web server, this will run the bundle and create the files.
 
 **Please note that the missing translations in a language will be replaced by the source language between brackets. This will break the ability to see from Symfony's toolbar the missing translations but as we rely on the database, we'll still be able to know what are the missing texts.**
