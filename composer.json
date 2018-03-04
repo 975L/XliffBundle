@@ -19,14 +19,19 @@
     ],
     "require": {
         "php": ">=5.5.9",
-        "symfony/framework-bundle": "3.*",
-        "sensio/framework-extra-bundle": "3.*",
-        "doctrine/orm": "2.*",
-        "doctrine/doctrine-bundle": "1.*"
+        "symfony/framework-bundle": "^3",
+        "sensio/framework-extra-bundle": "^3",
+        "doctrine/orm": "^2",
+        "doctrine/doctrine-bundle": "^1"
     },
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": { "c975L\\XliffBundle\\": ""
         }
+    },
+    "support": {
+        "email": "contact@975l.com",
+        "source": "https://github.com/975L/XliffBundle",
+        "issues": "https://github.com/975L/XliffBundle/issues"
     }
 }

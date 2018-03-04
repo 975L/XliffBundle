@@ -15,19 +15,10 @@ Step 1: Download the Bundle
 
 **We strongly recommend to use this only on the dev part**
 
-Add the following to your `composer.json > require-dev section`
-```
-"require-dev": {
-    "c975l/xliff-bundle": "1.*"
-},
-```
-Then open a command console, enter your project directory and update composer, by executing the following command, to download the latest stable version of this bundle:
-
+Use [Composer](https://getcomposer.org) to install the library
 ```bash
-$ composer update
+    composer require-dev c975l/xliff-bundle
 ```
-
-This command requires you to have Composer installed globally, as explained in the [installation chapter](https://getcomposer.org/doc/00-intro.md) of the Composer documentation.
 
 Step 2: Enable the Bundle
 -------------------------
@@ -72,13 +63,13 @@ Use `/Resources/sql/translations.sql` to create the table `translations`. The `D
 
 Step 4: Define languages to be exported
 ---------------------------------------
-Then define the list of languages to be exported in the `app/config_dev.yml` file of your project:
+Then, in the `app/config_dev.yml` file of your project, define the following:
 
 ```yml
-// app/config_dev.yml
-
 c975_l_xliff:
+    #Source language
     source: 'en'
+    #List of languages to be exported
     languages: ['en', 'fr', 'es']
 ```
 **The languages MUST match the column's names in the database table.**

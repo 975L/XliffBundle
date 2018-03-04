@@ -21,16 +21,16 @@ use c975L\XliffBundle\Entity\Xliff;
 class XliffController extends Controller
 {
     /**
-     * @Route("/975l_xliff",
-     *      name="975l_xliff")
+     * @Route("/xliff/create",
+     *      name="xliff_create")
      * @Method({"GET", "HEAD"})
      */
-    public function indexAction()
+    public function createAction()
     {
         set_time_limit(600);
         $sourceLanguage = $this->getParameter('c975_l_xliff.source');
         $languages = $this->getParameter('c975_l_xliff.languages');
-        $rootTranslations = __DIR__.'/../../../../' . $this->getParameter('c975_l_xliff.rootTranslations') . '/';
+        $rootTranslations = $this->getParameter('kernel.root_dir') . $this->getParameter('c975_l_xliff.rootTranslations') . '/';
         $xlfSkeleton = '@c975LXliff/skeleton.xlf.twig';
 
         $files = array();
@@ -67,7 +67,7 @@ class XliffController extends Controller
             }
         }
 
-        return $this->render('@c975LXliff/index.html.twig', array(
+        return $this->render('@c975LXliff/pages/create.html.twig', array(
             'files' => $files,
             ));
     }

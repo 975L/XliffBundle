@@ -1,8 +1,7 @@
-{# Resources/views/index.html.twig #}
+{% extends '@c975LXliff/layout.html.twig' %}
+{% set title = 'Xliff creation' %}
 
-<html>
-<head></head>
-<body>
+{% block xliff_content %}
     <div>
         The following {{ files|length }} xliff files have been created!<br/>
         <ul>
@@ -11,5 +10,4 @@
             {% endfor %}
         </ul>
     </div>
-</body>
-</html>
+{% endblock %}

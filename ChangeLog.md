@@ -1,5 +1,14 @@
 # Changelog
 
+v1.4
+----
+- Changes in `README.md` (16/08/2017)
+- Change about composer download in `README.md` (04/02/2018)
+- Add support in `composer.json`+ use of ^ for versions request (04/02/2018)
+- Changed Route and Route name [BC-Break] (04/03/2018)
+- Added `layout.html.twig` template to enable overiding it (04/03/2018)
+- Changed the way `rootTranslations` is defined (04/03/2018)
+
 v1.3.1
 ------
 - Run PHP CS-Fixer (18/07/2017)
