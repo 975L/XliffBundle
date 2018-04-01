@@ -1,5 +1,9 @@
 # Changelog
 
+v1.4.3
+------
+- Added missing title in `Resources/views/pagescreate.html.twig` (01/04/2018)
+
 v1.4.2
 ------
 - Corrected page naming display (26/03/2018)
