@@ -1,6 +1,6 @@
 <?php
 /*
- * (c) 2016: 975l <contact@975l.com>
+ * (c) 2016: 975L <contact@975l.com>
  * (c) 2016: Laurent Marquet <laurent.marquet@laposte.net>
  *
  * This source file is subject to the MIT license that is bundled
@@ -13,6 +13,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader;
+use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
 class c975LXliffExtension extends Extension
 {
@@ -21,6 +22,12 @@ class c975LXliffExtension extends Extension
      */
     public function load(array $configs, ContainerBuilder $container)
     {
+        $loader = new YamlFileLoader(
+            $container,
+            new FileLocator(__DIR__.'/../Resources/config')
+        );
+        $loader->load('services.yml');
+
         $configuration = new Configuration();
         $processedConfig = $this->processConfiguration($configuration, $configs);
 

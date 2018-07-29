@@ -1,5 +1,12 @@
 # Changelog
 
+v1.4.4
+------
+- Removed 'Action' in Controllers method as not requested anymore (29/07/2018)
+- Use of Yoda-style (29/07/2018)
+- Made Controller more SOLID compliant (29/07/2018)
+- Added services.yml to auto-wire (29/07/2018)
+
 v1.4.3
 ------
 - Added missing title in `Resources/views/pagescreate.html.twig` (01/04/2018)
