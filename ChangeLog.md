@@ -1,5 +1,9 @@
 # Changelog
 
+v1.4.4.1
+--------
+- Suppressed unused file (30/07/2018)
+
 v1.4.4
 ------
 - Removed 'Action' in Controllers method as not requested anymore (29/07/2018)
