@@ -12,34 +12,41 @@ namespace c975L\XliffBundle\Repository;
 use Doctrine\ORM\EntityRepository;
 use c975L\XliffBundle\Entity\Xliff;
 
+/**
+ * Repository for Xliff Entity
+ * @author Laurent Marquet <laurent.marquet@laposte.net>
+ * @copyright 2016 975L <contact@975l.com>
+ */
 class XliffRepository extends EntityRepository
 {
-
-    //Find all the records for the filename and the language
+    /**
+     * Finds all the translations for defined filename
+     * @return mixed
+     */
     public function findAllByFilenameLanguage($filename, $sourceLanguage, $language)
     {
-        return $this->getEntityManager()
-            ->createQuery(
-                'SELECT x.id, x.transKey, x.' . $sourceLanguage . ' AS default, x.' . $language . ' AS target
-                FROM c975L\XliffBundle\Entity\Xliff x
-                WHERE x.filename = :filename
-                ORDER BY x.transKey ASC'
-            )
-            ->setParameters(array(
-                'filename' => $filename
-            ))
-            ->getResult();
+        $qb = $this->createQueryBuilder('x');
+        $qb->select('x.id, x.transKey, x.' . $sourceLanguage . ' AS default, x.' . $language . ' AS target')
+            ->where('x.filename = :filename')
+            ->setParameter('filename', $filename)
+            ->orderBy('x.transKey', 'ASC')
+            ;
+
+        return $qb->getQuery()->getResult();
     }
 
-    //Find distinct filenames
+    /**
+     * Finds distinct filenames
+     * @return mixed
+     */
     public function findDistinctFilename()
     {
-        return $this->getEntityManager()
-            ->createQuery(
-                'SELECT DISTINCT x.filename
-                FROM c975L\XliffBundle\Entity\Xliff x
-                ORDER BY x.filename ASC'
-            )
-            ->getResult();
+        $qb = $this->createQueryBuilder('x');
+        $qb->select('x.filename')
+            ->orderBy('x.filename', 'ASC')
+            ->distinct()
+            ;
+
+        return $qb->getQuery()->getResult();
     }
 }

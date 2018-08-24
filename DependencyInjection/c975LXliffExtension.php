@@ -15,11 +15,13 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
+/**
+ * DI Extension Class
+ * @author Laurent Marquet <laurent.marquet@laposte.net>
+ * @copyright 2016 975L <contact@975l.com>
+ */
 class c975LXliffExtension extends Extension
 {
-    /**
-     * {@inheritdoc}
-     */
     public function load(array $configs, ContainerBuilder $container)
     {
         $loader = new YamlFileLoader(

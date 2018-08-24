@@ -5,7 +5,9 @@ XliffBundle does the following:
 
 - exports xlf files from a database, where columns are languages, to be used as translation files in Symfony (or other).
 
-[Xliff Bundle dedicated web page](https://975l.com/en/pages/xliff-bundle).
+[XliffBundle dedicated web page](https://975l.com/en/pages/xliff-bundle).
+
+[XliffBundle API documentation](https://975l.com/apidoc/c975L/XliffBundle.html).
 
 Bundle installation
 ===================
@@ -78,6 +80,8 @@ c975_l_xliff:
 
 How to use
 ----------
-Add `/xliff/create` to the url of your local web server, this will run the bundle and create the files.
+Call your localhost with `/xliff/create`, this will run the bundle and create the xlf files.
 
 **Please note that the missing translations in a language will be replaced by the source language between brackets. This will break the ability to see from Symfony's toolbar the missing translations but as we rely on the database, we'll still be able to know what are the missing texts.**
+
+**If this project help you to reduce time to develop, you can [buy me a coffee](https://www.buymeacoffee.com/LaurentMarquet) :)**

@@ -15,7 +15,9 @@ use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Filesystem\Exception\IOExceptionInterface;
 
 /**
- * Xliff
+ * Entity Xliff (linked to DB table `translations`)
+ * @author Laurent Marquet <laurent.marquet@laposte.net>
+ * @copyright 2017 975L <contact@975l.com>
  *
  * @ORM\Table(name="translations")
  * @ORM\Entity(repositoryClass="c975L\XliffBundle\Repository\XliffRepository")
@@ -24,7 +26,8 @@ use Symfony\Component\Filesystem\Exception\IOExceptionInterface;
 class Xliff
 {
     /**
-     * @var integer
+     * Translation unique id
+     * @var int
      *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
@@ -33,6 +36,7 @@ class Xliff
     private $id;
 
     /**
+     * Filename for .xlf file
      * @var string
      *
      * @ORM\Column(name="filename", type="string", length=16, nullable=true)
@@ -40,6 +44,7 @@ class Xliff
     private $filename;
 
     /**
+     * key that will be used for placeholder translation
      * @var string
      *
      * @ORM\Column(name="trans_key", type="string", length=32, nullable=true)
@@ -47,6 +52,7 @@ class Xliff
     private $transKey;
 
     /**
+     * Translation in english
      * @var string
      *
      * @ORM\Column(name="en", type="string", length=1024, nullable=true)
@@ -54,6 +60,7 @@ class Xliff
     private $en;
 
     /**
+     * Translation in french
      * @var string
      *
      * @ORM\Column(name="fr", type="string", length=1024, nullable=true)
@@ -61,6 +68,7 @@ class Xliff
     private $fr;
 
     /**
+     * Translation in spanish
      * @var string
      *
      * @ORM\Column(name="es", type="string", length=1024, nullable=true)
@@ -71,8 +79,7 @@ class Xliff
 
     /**
      * Get id
-     *
-     * @return integer
+     * @return int
      */
     public function getId()
     {
@@ -81,9 +88,7 @@ class Xliff
 
     /**
      * Set filename
-     *
-     * @param string $filename
-     *
+     * @param string
      * @return Xliff
      */
     public function setFilename($filename)
@@ -95,7 +100,6 @@ class Xliff
 
     /**
      * Get filename
-     *
      * @return string
      */
     public function getFilename()
@@ -105,9 +109,7 @@ class Xliff
 
     /**
      * Set transKey
-     *
-     * @param string $transKey
-     *
+     * @param string
      * @return Xliff
      */
     public function setTransKey($transKey)
@@ -118,8 +120,7 @@ class Xliff
     }
 
     /**
-     * Get filenmae
-     *
+     * Get transKey
      * @return string
      */
     public function getTransKey()
@@ -129,9 +130,7 @@ class Xliff
 
     /**
      * Set en
-     *
-     * @param string $en
-     *
+     * @param string
      * @return Xliff
      */
     public function setEn($en)
@@ -142,8 +141,7 @@ class Xliff
     }
 
     /**
-     * Get filenmae
-     *
+     * Get en
      * @return string
      */
     public function getEn()
@@ -153,9 +151,7 @@ class Xliff
 
     /**
      * Set fr
-     *
-     * @param string $fr
-     *
+     * @param string
      * @return Xliff
      */
     public function setFr($fr)
@@ -166,8 +162,7 @@ class Xliff
     }
 
     /**
-     * Get filenmae
-     *
+     * Get fr
      * @return string
      */
     public function getFr()
@@ -177,9 +172,7 @@ class Xliff
 
     /**
      * Set es
-     *
-     * @param string $es
-     *
+     * @param string
      * @return Xliff
      */
     public function setEs($es)
@@ -190,8 +183,7 @@ class Xliff
     }
 
     /**
-     * Get filenmae
-     *
+     * Get es
      * @return string
      */
     public function getEs()

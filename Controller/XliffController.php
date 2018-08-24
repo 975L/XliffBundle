@@ -14,16 +14,24 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use c975L\XliffBundle\Service\XliffService;
+use c975L\XliffBundle\Service\XliffServiceInterface;
 
+/**
+ * Main Controller class
+ * @author Laurent Marquet <laurent.marquet@laposte.net>
+ * @copyright 2016 975L <contact@975l.com>
+ */
 class XliffController extends Controller
 {
     /**
+     * Creates the xlf files
+     * @return Response
+     *
      * @Route("/xliff/create",
      *      name="xliff_create")
      * @Method({"GET", "HEAD"})
      */
-    public function create(XliffService $xliffService)
+    public function create(XliffServiceInterface $xliffService)
     {
         return $this->render('@c975LXliff/pages/create.html.twig', array(
             'files' => $xliffService->exportFiles(),

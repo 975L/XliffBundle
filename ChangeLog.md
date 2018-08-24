@@ -1,5 +1,14 @@
 # Changelog
 
+v1.4.5
+------
+- Added link to BuyMeCoffee (24/08/2018)
+- Added link to apidoc (24/08/2018)
+- Added documentation (24/08/2018)
+- Re-wrote Repositry methods (24/08/2018)
+- Removed FQCN (24/08/2018)
+- Created XliffServiceInterface (24/08/2018)
+
 v1.4.4.1
 --------
 - Suppressed unused file (30/07/2018)

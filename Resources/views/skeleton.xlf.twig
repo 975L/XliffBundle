@@ -3,13 +3,13 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
     <file source-language="{{ sourceLanguage }}" target-language="{{ language }}" datatype="plaintext" original="{{ filename }}.{{ sourceLanguage }}.xlf">
         <body>
-        {% for xliff_line in xliff %}
-            <trans-unit id="{{ xliff_line.id }}">
-                <source>{{ xliff_line.transKey|trim }}</source>
-                {% if xliff_line.target == null %}
-                    <target>[<![CDATA[[ {{ xliff_line.default|raw }} ]]]>]</target>
+        {% for translation in translations %}
+            <trans-unit id="{{ translation.id }}">
+                <source>{{ translation.transKey|trim }}</source>
+                {% if translation.target == null %}
+                    <target>[<![CDATA[[ {{ translation.default|raw }} ]]]>]</target>
                 {% else %}
-                    <target><![CDATA[{{ xliff_line.target|raw }}]]></target>
+                    <target><![CDATA[{{ translation.target|raw }}]]></target>
                 {% endif %}
             </trans-unit>
         {% endfor %}

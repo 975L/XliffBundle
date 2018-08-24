@@ -9,26 +9,45 @@
 
 namespace c975L\XliffBundle\Service;
 
-use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
+use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Filesystem\Filesystem;
+use Twig_Environment;
+use c975L\XliffBundle\Service\XliffServiceInterface;
 
-class XliffService
+class XliffService implements XliffServiceInterface
 {
+    /**
+     * Stores Container
+     * @var ContainerInterface
+     */
     private $container;
+
+    /**
+     * Stores EntityManager
+     * @var EntityManagerInterface
+     */
     private $em;
+
+    /**
+     * Stores Twig_Environment
+     * @var Twig_Environment
+     */
     private $templating;
 
     public function __construct(
-        \Symfony\Component\DependencyInjection\ContainerInterface $container,
-        \Doctrine\ORM\EntityManager $em,
-        \Twig_Environment $templating
+        ContainerInterface $container,
+        EntityManagerInterface $em,
+        Twig_Environment $templating
     ) {
         $this->container = $container;
         $this->em = $em;
         $this->templating = $templating;
     }
 
-    //Exports files in xlf format
+    /**
+     * {@inheritdoc}
+     */
     public function exportFiles()
     {
         //Defines parameters
@@ -54,7 +73,7 @@ class XliffService
                 $files[] = $filenameXliff;
 
                 //File contents
-                $xliff = $this->em
+                $translations = $this->em
                     ->getRepository('c975LXliffBundle:Xliff')
                     ->findAllByFilenameLanguage($filename['filename'], $sourceLanguage, $language);
                 ob_start();
@@ -62,7 +81,7 @@ class XliffService
                         'sourceLanguage' => $sourceLanguage,
                         'filename' => $filename['filename'],
                         'language' => $language,
-                        'xliff' => $xliff
+                        'translations' => $translations
                         ));
                 ob_end_clean();
 
