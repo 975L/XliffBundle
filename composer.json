@@ -26,8 +26,12 @@
     },
     "minimum-stability": "dev",
     "autoload": {
-        "psr-4": { "c975L\\XliffBundle\\": ""
+        "psr-4": {
+            "c975L\\XliffBundle\\": ""
         }
+    },
+    "config": {
+        "sort-packages": true
     },
     "support": {
         "email": "contact@975l.com",

@@ -1,5 +1,7 @@
 # Changelog
 
+- Updated composer.json (01/09/2018)
+
 v1.4.5
 ------
 - Added link to BuyMeCoffee (24/08/2018)
