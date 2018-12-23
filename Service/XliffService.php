@@ -13,7 +13,6 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Filesystem\Filesystem;
 use Twig_Environment;
-use c975L\XliffBundle\Service\XliffServiceInterface;
 
 class XliffService implements XliffServiceInterface
 {

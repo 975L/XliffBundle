@@ -9,12 +9,11 @@
 
 namespace c975L\XliffBundle\Controller;
 
+use c975L\XliffBundle\Service\XliffServiceInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use c975L\XliffBundle\Service\XliffServiceInterface;
 
 /**
  * Main Controller class

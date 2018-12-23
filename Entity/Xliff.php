@@ -10,9 +10,6 @@
 namespace c975L\XliffBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\Filesystem\Filesystem;
-use Symfony\Component\Filesystem\Exception\IOExceptionInterface;
 
 /**
  * Entity Xliff (linked to DB table `translations`)
@@ -74,8 +71,6 @@ class Xliff
      * @ORM\Column(name="es", type="string", length=1024, nullable=true)
      */
     private $es;
-
-
 
     /**
      * Get id

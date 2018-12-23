@@ -9,8 +9,8 @@
 
 namespace c975L\XliffBundle\Repository;
 
-use Doctrine\ORM\EntityRepository;
 use c975L\XliffBundle\Entity\Xliff;
+use Doctrine\ORM\EntityRepository;
 
 /**
  * Repository for Xliff Entity
