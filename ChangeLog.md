@@ -1,5 +1,9 @@
 # Changelog
 
+v1.4.7
+------
+- Modified required versions in `composer.json` (25/12/2018)
+
 v1.4.6
 ------
 - Updated composer.json (01/09/2018)
