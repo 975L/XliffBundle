@@ -10,9 +10,8 @@
 namespace c975L\XliffBundle\Controller;
 
 use c975L\XliffBundle\Service\XliffServiceInterface;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
@@ -20,15 +19,15 @@ use Symfony\Component\HttpFoundation\Response;
  * @author Laurent Marquet <laurent.marquet@laposte.net>
  * @copyright 2016 975L <contact@975l.com>
  */
-class XliffController extends Controller
+class XliffController extends AbstractController
 {
     /**
      * Creates the xlf files
      * @return Response
      *
      * @Route("/xliff/create",
-     *      name="xliff_create")
-     * @Method({"GET", "HEAD"})
+     *    name="xliff_create",
+     *    methods={"HEAD", "GET"})
      */
     public function create(XliffServiceInterface $xliffService)
     {
