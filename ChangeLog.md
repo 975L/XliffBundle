@@ -1,5 +1,10 @@
 # Changelog
 
+v1.5
+----
+- Modified Entity to use typehint (15/02/2019)
+- Documented the possibility to use `php bin/console make:migration` (15/02/2019)
+
 v1.4.8
 ------
 - Removed deprecations for @Method (13/02/2019)

@@ -61,7 +61,7 @@ c975_l_xliff:
 
 Step 5: Create MySql table
 --------------------------
-Use `/Resources/sql/translations.sql` to create the table `translations`. The `DROP TABLE` is commented to avoid dropping by mistake.
+You can use `php bin/console make:migration` to create the migration file as documented in [Symfony's Doctrine docs](https://symfony.com/doc/current/doctrine.html) OR use `/Resources/sql/translations.sql` to create the table `translations`. The `DROP TABLE` is commented to avoid dropping by mistake.
 
 Step 4: Define languages to be exported
 ---------------------------------------

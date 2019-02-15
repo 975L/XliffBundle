@@ -76,7 +76,7 @@ class Xliff
      * Get id
      * @return int
      */
-    public function getId()
+    public function getId(): int
     {
         return $this->id;
     }
@@ -86,7 +86,7 @@ class Xliff
      * @param string
      * @return Xliff
      */
-    public function setFilename($filename)
+    public function setFilename(?string $filename)
     {
         $this->filename = $filename;
 
@@ -97,7 +97,7 @@ class Xliff
      * Get filename
      * @return string
      */
-    public function getFilename()
+    public function getFilename(): ?string
     {
         return $this->filename;
     }
@@ -107,7 +107,7 @@ class Xliff
      * @param string
      * @return Xliff
      */
-    public function setTransKey($transKey)
+    public function setTransKey(?string $transKey)
     {
         $this->transKey = $transKey;
 
@@ -118,7 +118,7 @@ class Xliff
      * Get transKey
      * @return string
      */
-    public function getTransKey()
+    public function getTransKey(): ?string
     {
         return $this->transKey;
     }
@@ -128,7 +128,7 @@ class Xliff
      * @param string
      * @return Xliff
      */
-    public function setEn($en)
+    public function setEn(?string $en)
     {
         $this->en = $en;
 
@@ -139,7 +139,7 @@ class Xliff
      * Get en
      * @return string
      */
-    public function getEn()
+    public function getEn(): ?string
     {
         return $this->en;
     }
@@ -149,7 +149,7 @@ class Xliff
      * @param string
      * @return Xliff
      */
-    public function setFr($fr)
+    public function setFr(?string $fr)
     {
         $this->fr = $fr;
 
@@ -160,7 +160,7 @@ class Xliff
      * Get fr
      * @return string
      */
-    public function getFr()
+    public function getFr(): ?string
     {
         return $this->fr;
     }
@@ -170,7 +170,7 @@ class Xliff
      * @param string
      * @return Xliff
      */
-    public function setEs($es)
+    public function setEs(?string $es)
     {
         $this->es = $es;
 
@@ -181,7 +181,7 @@ class Xliff
      * Get es
      * @return string
      */
-    public function getEs()
+    public function getEs(): ?string
     {
         return $this->es;
     }
