@@ -12,7 +12,7 @@ namespace c975L\XliffBundle\Service;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Filesystem\Filesystem;
-use Twig_Environment;
+use Twig\Environment;
 
 class XliffService implements XliffServiceInterface
 {
@@ -29,19 +29,19 @@ class XliffService implements XliffServiceInterface
     private $em;
 
     /**
-     * Stores Twig_Environment
-     * @var Twig_Environment
+     * Stores Environment
+     * @var Environment
      */
-    private $templating;
+    private $environment;
 
     public function __construct(
         ContainerInterface $container,
         EntityManagerInterface $em,
-        Twig_Environment $templating
+        Environment $environment
     ) {
         $this->container = $container;
         $this->em = $em;
-        $this->templating = $templating;
+        $this->environment = $environment;
     }
 
     /**
@@ -76,7 +76,7 @@ class XliffService implements XliffServiceInterface
                     ->getRepository('c975LXliffBundle:Xliff')
                     ->findAllByFilenameLanguage($filename['filename'], $sourceLanguage, $language);
                 ob_start();
-                    $contentsXliff = $this->templating->render('@c975LXliff/skeleton.xlf.twig', array(
+                    $contentsXliff = $this->environment->render('@c975LXliff/skeleton.xlf.twig', array(
                         'sourceLanguage' => $sourceLanguage,
                         'filename' => $filename['filename'],
                         'language' => $language,

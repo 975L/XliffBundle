@@ -1,5 +1,9 @@
 # Changelog
 
+v1.5.1
+------
+- Made use of Twig namespace (07/03/2019)
+
 v1.5
 ----
 - Modified Entity to use typehint (15/02/2019)

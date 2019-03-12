@@ -10,9 +10,9 @@
 namespace c975L\XliffBundle\Controller;
 
 use c975L\XliffBundle\Service\XliffServiceInterface;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * Main Controller class
