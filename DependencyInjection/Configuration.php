@@ -21,25 +21,7 @@ class Configuration implements ConfigurationInterface
 {
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder('c975_l_xliff');
-        $rootNode = $treeBuilder->getRootNode();
-
-        $rootNode
-            ->children()
-                ->scalarNode('source')
-                    ->defaultValue('en')
-                ->end()
-                ->scalarNode('rootTranslations')
-                    ->defaultValue('app/Resources/translations')
-                ->end()
-                ->arrayNode('languages')
-                    ->prototype('scalar')->end()
-                    ->defaultValue(array(
-                        'en',
-                    ))
-                ->end()
-            ->end()
-        ;
+        $treeBuilder = new TreeBuilder('c975_l_contact_form');
 
         return $treeBuilder;
     }

@@ -65,18 +65,9 @@ You can use `php bin/console make:migration` to create the migration file as doc
 
 Step 4: Define languages to be exported
 ---------------------------------------
-Then, in the `app/config_dev.yml` file of your project, define the following:
+v2.0+ of c975LXliffBundle uses [c975L/ConfigBundle](https://github.com/975L/ConfigBundle) to manage configuration parameters. Use the Route "/xliff/config" with the proper user role to modify them.
 
-```yml
-c975_l_xliff:
-    #folder where the files will be saved
-    rootTranslations: '/Resources/translations'
-    #Source language
-    source: 'en'
-    #List of languages to be exported
-    languages: ['en', 'fr', 'es']
-```
-**The languages MUST match the column's names in the database table.**
+**Upgrading from v1.x? Check [UPGRADE.md](UPGRADE.md).**
 
 How to use
 ----------

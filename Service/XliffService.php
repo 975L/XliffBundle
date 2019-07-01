@@ -9,18 +9,19 @@
 
 namespace c975L\XliffBundle\Service;
 
+use c975L\ConfigBundle\Service\ConfigServiceInterface;
 use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Filesystem\Filesystem;
+use Symfony\Component\HttpKernel\Kernel;
 use Twig\Environment;
 
 class XliffService implements XliffServiceInterface
 {
     /**
-     * Stores Container
-     * @var ContainerInterface
+     * Stores ConfigServiceInterface
+     * @var ConfigServiceInterface
      */
-    private $container;
+    private $configService;
 
     /**
      * Stores EntityManager
@@ -35,11 +36,11 @@ class XliffService implements XliffServiceInterface
     private $environment;
 
     public function __construct(
-        ContainerInterface $container,
+        ConfigServiceInterface $configService,
         EntityManagerInterface $em,
         Environment $environment
     ) {
-        $this->container = $container;
+        $this->configService = $configService;
         $this->em = $em;
         $this->environment = $environment;
     }
@@ -51,9 +52,15 @@ class XliffService implements XliffServiceInterface
     {
         //Defines parameters
         set_time_limit(600);
-        $sourceLanguage = $this->container->getParameter('c975_l_xliff.source');
-        $languages = $this->container->getParameter('c975_l_xliff.languages');
-        $rootTranslations = $this->container->getParameter('kernel.root_dir') . $this->container->getParameter('c975_l_xliff.rootTranslations') . '/';
+        $sourceLanguage = $this->configService->getParameter('c975LXliff.source');
+        $languages = $this->configService->getParameter('c975LXliff.languages');
+
+        $root = $this->configService->getContainerParameter('kernel.root_dir');
+        if ('4' === substr(Kernel::VERSION, 0, 1)) {
+            $rootTranslations = $root . '/../translations/';
+        } else {
+            $rootTranslations = $root . '/../app/Resources/translations/';
+        }
 
         //Gets Filenames
         $filenames = $this->em

@@ -1,5 +1,15 @@
 # Changelog
 
+v2.0
+----
+**Upgrading from v1.x? Check UPGRADE.md**
+- Created branch 1.x (01/07/2019)
+- Made use of c975L/ConfigBundle (01/07/2019)
+
+
+v1.x
+====
+
 v1.5.1.1
 --------
 - Changed Github's author reference url (08/04/2019)

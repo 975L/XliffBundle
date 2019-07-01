@@ -1,0 +1,16 @@
+c975LXliff:
+    roleNeeded:
+        type: string
+        required: true
+        default: ROLE_ADMIN
+        info: "User's role needed to enable access to data linked to ContactFormBundle: i.e. ROLE_ADMIN (default)"
+    source:
+        type: string
+        required: false
+        default: ''
+        info: "The source language used, which is the name of the databse table column (i.e. 'en')"
+    languages:
+        type: array
+        required: false
+        default: ''
+        info: "Array of the languages that should be created, matching the names of the databse table (i.e. ['en', 'fr', 'es'])"
