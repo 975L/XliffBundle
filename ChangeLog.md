@@ -1,5 +1,13 @@
 # Changelog
 
+v2.1.1
+------
+- Modified ChangeLog.md (05/08/2019)
+
+v2.1
+----
+- Made use of apply spaceless (05/08/2019)
+
 v2.0
 ----
 **Upgrading from v1.x? Check UPGRADE.md**
