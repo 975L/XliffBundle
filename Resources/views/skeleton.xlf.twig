@@ -1,4 +1,4 @@
-{% spaceless %}
+{% apply spaceless %}
 <?xml version="1.0"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
     <file source-language="{{ sourceLanguage }}" target-language="{{ language }}" datatype="plaintext" original="{{ filename }}.{{ sourceLanguage }}.xlf">
@@ -16,4 +16,4 @@
         </body>
     </file>
 </xliff>
-{% endspaceless %}
+{% endapply %}
