@@ -1,5 +1,9 @@
 # Changelog
 
+v2.2.1
+------
+- Suppressed composer.lock (19/01/2020)
+
 v2.2
 ----
 - Changed doctrine-bundle version (19/01/2020)
