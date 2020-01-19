@@ -33,6 +33,6 @@ class XliffController extends AbstractController
     {
         return $this->render('@c975LXliff/pages/create.html.twig', array(
             'files' => $xliffService->exportFiles(),
-            ));
+        ));
     }
 }

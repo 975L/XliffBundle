@@ -65,7 +65,8 @@ class XliffService implements XliffServiceInterface
         //Gets Filenames
         $filenames = $this->em
             ->getRepository('c975LXliffBundle:Xliff')
-            ->findDistinctFilename();
+            ->findDistinctFilename()
+        ;
 
         //Creates Folders
         $fs = new Filesystem();
