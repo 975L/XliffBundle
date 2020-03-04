@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.3.1.1
+
+- Removed else clause (04/03/2020)
+
 ## v2.3.1
 
 - Cosmetic changes linked to Codacy review (04/03/2020)

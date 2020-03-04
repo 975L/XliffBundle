@@ -69,6 +69,6 @@ v2.0+ of c975LXliffBundle uses [c975L/ConfigBundle](https://github.com/975L/Conf
 
 Call your localhost with `/xliff/create`, this will run the bundle and create the xlf files.
 
-**Please note that the missing translations in a language will be replaced by the source language between brackets. This will break the ability to see from Symfony's toolbar the missing translations but as we rely on the database, we'll still be able to know what are the missing texts.**
+Please note that **the missing translations in a language will be replaced by the source language between brackets. This will break the ability to see from Symfony's toolbar the missing translations, but as we rely on the database, we'll still be able to know what are the missing texts.**
 
-**If this project help you to reduce time to develop, you can [buy me a coffee](https://www.buymeacoffee.com/LaurentMarquet) :)**
+If this project **help you to reduce time to develop**, you can sponsor me via the "Sponsor" button at the top :)
