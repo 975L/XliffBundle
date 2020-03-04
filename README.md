@@ -1,5 +1,4 @@
-XliffBundle
-===========
+# XliffBundle
 
 XliffBundle does the following:
 
@@ -9,21 +8,19 @@ XliffBundle does the following:
 
 [XliffBundle API documentation](https://975l.com/apidoc/c975L/XliffBundle.html).
 
-Bundle installation
-===================
+## Bundle installation
 
-Step 1: Download the Bundle
----------------------------
-
-**We strongly recommend to use this only on the dev part**
+### Step 1: Download the Bundle
 
 Use [Composer](https://getcomposer.org) to install the library
+
 ```bash
     composer require-dev c975l/xliff-bundle
 ```
 
-Step 2: Enable the Bundle
--------------------------
+We strongly recommend to **use this only on the dev part**
+
+### Step 2: Enable the Bundle
 
 Then, enable the bundle by adding it to the list of registered bundles in the `app/AppKernel.php` file of your project:
 
@@ -45,8 +42,7 @@ class AppKernel extends Kernel
 }
 ```
 
-Step 3: Enable the Routes
--------------------------
+### Step 3: Enable the Routes
 
 Then, enable the routes by adding them to the `app/config/routing_dev.yml` file of your project:
 
@@ -59,18 +55,18 @@ c975_l_xliff:
     prefix:   /
 ```
 
-Step 5: Create MySql table
---------------------------
+### Step 5: Create MySql table
+
 You can use `php bin/console make:migration` to create the migration file as documented in [Symfony's Doctrine docs](https://symfony.com/doc/current/doctrine.html) OR use `/Resources/sql/translations.sql` to create the table `translations`. The `DROP TABLE` is commented to avoid dropping by mistake.
 
-Step 4: Define languages to be exported
----------------------------------------
+### Step 4: Define languages to be exported
+
 v2.0+ of c975LXliffBundle uses [c975L/ConfigBundle](https://github.com/975L/ConfigBundle) to manage configuration parameters. Use the Route "/xliff/config" with the proper user role to modify them.
 
 **Upgrading from v1.x? Check [UPGRADE.md](UPGRADE.md).**
 
-How to use
-----------
+## How to use
+
 Call your localhost with `/xliff/create`, this will run the bundle and create the xlf files.
 
 **Please note that the missing translations in a language will be replaced by the source language between brackets. This will break the ability to see from Symfony's toolbar the missing translations but as we rely on the database, we'll still be able to know what are the missing texts.**
