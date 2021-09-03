@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.4
+
+- Removed versions constraints in composer (03/09/2021)
+
 ## v2.3.1.1
 
 - Removed else clause (04/03/2020)
@@ -33,7 +37,7 @@
 - Created branch 1.x (01/07/2019)
 - Made use of c975L/ConfigBundle (01/07/2019)
 
-### Upgrading from v1.x? Check UPGRADE.md
+Upgrading from v1.x? **Check UPGRADE.md**
 
 ## v1.x
 
