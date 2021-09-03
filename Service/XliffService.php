@@ -55,7 +55,7 @@ class XliffService implements XliffServiceInterface
         $sourceLanguage = $this->configService->getParameter('c975LXliff.source');
         $languages = $this->configService->getParameter('c975LXliff.languages');
 
-        $root = $this->configService->getContainerParameter('kernel.root_dir');
+        $root = $this->configService->getContainerParameter('kernel.project_dir');
         $rootTranslations = '3' === substr(Kernel::VERSION, 0, 1) ? $root . '/../app/Resources/translations/' : $root . '/../translations/';
 
         //Gets Filenames

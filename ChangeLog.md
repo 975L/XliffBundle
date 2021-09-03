@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.4.1
+
+- Replaced `kernel.root_dir` by `kernel.project_dir` (03/09/2021)
+
 ## v2.4
 
 - Removed versions constraints in composer (03/09/2021)
