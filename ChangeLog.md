@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.4.2
+
+- Corrected folder path for translations (08/10/2021)
+
 ## v2.4.1
 
 - Replaced `kernel.root_dir` by `kernel.project_dir` (03/09/2021)
