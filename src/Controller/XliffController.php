@@ -24,11 +24,12 @@ class XliffController extends AbstractController
     /**
      * Creates the xlf files
      * @return Response
-     *
-     * @Route("/xliff/create",
-     *    name="xliff_create",
-     *    methods={"HEAD", "GET"})
      */
+    #[Route(
+        '/xliff/create',
+        name: 'xliff_create',
+        methods: ['GET']
+    )]
     public function create(XliffServiceInterface $xliffService)
     {
         return $this->render('@c975LXliff/pages/create.html.twig', array(

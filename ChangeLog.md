@@ -1,5 +1,11 @@
 # Changelog
 
+## v3.0
+
+- Changed to new recomended bundle SF 7 structure (22/01/2024)
+
+Upgrading from v2.x? **Check UPGRADE.md**
+
 ## v2.4.2
 
 - Corrected folder path for translations (08/10/2021)
